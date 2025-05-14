@@ -1,10 +1,18 @@
 <script setup>
 
+import {ref, onMounted} from 'vue'
+
+const videoRef = ref(null)
+
 defineProps({
   video: {
     type: String,
     required: true,
   },
+})
+
+onMounted(()=>{
+  videoRef.value.play()
 })
 
 </script>
